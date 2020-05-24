@@ -89,12 +89,17 @@
     margin-top:4rem ;
 }
 .card {
-    width: 100%;
-    background-color: #fff;
-    padding: 2rem 4rem;
+    /*width: 100%;*/
+    /*background-color: #fff;*/
+    /*padding: 2rem 4rem;*/
     border-radius: 10px;
-    margin-bottom: 2rem;
-    box-shadow: 1px 1px 5px rgba(0, 0,0, 0.25);
+    /*margin-bottom: 2rem;*/
+    /*box-shadow: 1px 1px 5px rgba(0, 0,0, 0.25);*/
+}
+
+.card-image img{
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
 }
 
 .car--title{

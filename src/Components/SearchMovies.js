@@ -12,7 +12,43 @@ export default function SearchMovies() {
   const [query, setQuery] = useState('');
 
   //state for movies and update the state
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([
+    // {
+    //   popularity: 100.167,
+    //   vote_count: 4572,
+    //   video: false,
+    //   poster_path: "/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg",
+    //   id: 330457,
+    //   adult: false,
+    //   backdrop_path: "/xJWPZIYOEFIjZpBL7SVBGnzRYXp.jpg",
+    //   original_language: "en",
+    //   original_title: "Frozen II",
+    //   genre_ids: [12, 16, 10751],
+    //   title: "Frozen II",
+    //   vote_average: 7.2,
+    //   overview: "Elsa, Anna, Kristoff and Olaf head far into the forest to learn the truth about an ancient mystery of their kingdom.",
+    //   release_date: "2019-11-20"
+    // },
+    // {
+    //   popularity: 40.965,
+    //   vote_count: 11815,
+    //   video: false,
+    //   poster_path: "/yald8Lsb4uCRvjIH3spzR84Kdwf.jpg",
+    //   id: 109445,
+    //   adult: false,
+    //   backdrop_path: "/fydUcbkqLyESCFa9U5XKqi8dIVj.jpg",
+    //   original_language: "en",
+    //   original_title: "Frozen",
+    //   genre_ids: [12, 16, 10751],
+    //   title: "Frozen",
+    //   vote_average: 7.3,
+    //   overview: `Young princess Anna of Arendelle dreams about finding true love at her sister Elsa’s coronation.
+    //    Fate takes her on a dangerous journey in an attempt to end the eternal winter that has fallen over the kingdom.
+    //    She's accompanied by ice delivery man Kristoff, his reindeer Sven, and snowman Olaf. On an adventure where she
+    //    will find out what friendship, courage, family, and true love really means.`,
+    //   release_date: "2013-11-27"
+    // }
+  ]);
 
 
   //Making call to movie api
@@ -29,6 +65,7 @@ export default function SearchMovies() {
     try {
       const res = await fetch(url);
       const data = await res.json();
+      console.log(data);
 
       setMovies(data.results);
       setIsLoading(false);
@@ -84,11 +121,11 @@ export default function SearchMovies() {
                 </div>
               </div>
             </div>
-             :
+            :
             <div className="row">
               {
                 movies.filter(movie => movie.poster_path).map(movie => (
-                  <div className="col s12 m6">
+                  <div className="col s6 m4">
                     <MovieCard movie={movie}/>
                   </div>
                 ))
