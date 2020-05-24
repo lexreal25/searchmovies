@@ -36,17 +36,38 @@ export default function SearchMovies(){
 
     return(
         <div>
-            <form className="form" onSubmit={searchMovies}>
-                <label htmlFor="query" className="label">Movie Name:</label>
-                <input type="text" className="input" name="query" placeholder="i.e cherry.mkv"
-                    value={query} onChange={(e) => setQuery(e.target.value)}
-                ></input>
-                <button className="button" type="submit">Submit</button>
+            <form className="row form" onSubmit={searchMovies}>
+                
+                <div className="input-field col s8 m9 l10">
+                  <input type="text" 
+                        id="first_name" 
+                        className="input" 
+                        name="query" 
+                        placeholder="i.e cherry.mkv"
+                        class="validate"
+                        value={query} 
+                        onChange={(e) => setQuery(e.target.value)}
+                  />
+                  <label htmlFor="query" className="label">Movie Name:</label>
+                </div>
+                <div className="col s4 m3 l2">
+                  <button className="button" type="submit">Submit</button>
+            
+                </div>
+            
             </form>
             <div className="card-list">
-                {movies.filter(movie => movie.poster_path).map(movie => (
-                   <MovieCard movie={movie} />
-                ))}
+              <div class="row">
+                {
+                  movies.filter(movie => movie.poster_path).map(movie => (
+                    <div class="col s12 m6">
+                      <MovieCard movie={movie} />
+                    </div>
+                  ))
+                }
+                
+              </div>
+                
             </div>      
         </div>
     )
