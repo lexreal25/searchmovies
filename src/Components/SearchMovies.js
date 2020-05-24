@@ -122,10 +122,10 @@ export default function SearchMovies() {
               </div>
             </div>
             :
-            <div className="row">
+            <div className="my-row">
               {
                 movies.filter(movie => movie.poster_path).map(movie => (
-                  <div className="col s6 m4">
+                  <div className="column">
                     <MovieCard movie={movie}/>
                   </div>
                 ))
