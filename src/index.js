@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import SearchMovies from './Components/SearchMovies'
 import * as serviceWorker from './serviceWorker';
 
 // class Main extends React.Component{
