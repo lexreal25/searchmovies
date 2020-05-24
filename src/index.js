@@ -2,13 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import SearchMovies from './Components/SearchMovies'
 import * as serviceWorker from './serviceWorker';
 
+class Main extends React.Component{
+  render(){
+    return(
+      <div className="container">
+        <h2 className="title">Search Any Movie Here</h2>
+        <SearchMovies />
+      </div>
+    )
+  }
+}
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+<React.StrictMode>
+  <Main />
+  <App />
+ 
+  </React.StrictMode>,document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
