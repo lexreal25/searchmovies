@@ -15,6 +15,24 @@
     width: 100%;
 }
 
+.text-input{
+    border-bottom: none !important;
+    border-radius: 5px !important;
+    padding-left: 10px !important;
+    background-color: #ffffff !important;
+    width: 100% !important;
+    height: 57px;
+}
+
+.text-input:focus{
+    /*border-bottom: none !important;*/
+    border-radius: 5px !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid rgba(0, 0, 0, 0.5) !important;
+}
+
 .button {
     background-color: rgba(0, 0,0, 0.7);
     color: white;
