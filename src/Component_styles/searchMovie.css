@@ -65,7 +65,7 @@
     }
    
 }
-@media(max-width:640px){
+/*@media(max-width:640px){
    
     .card--desc{
         font-size: 0.7rem;
@@ -84,7 +84,7 @@
         font-size: 1.5rem;
     }
 }  
-
+*/
 .card--list{
     margin-top:4rem ;
 }
